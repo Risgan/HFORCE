@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E70A9726-A731-4CEB-ABFD-7C9731F931F0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HforceWindows</RootNamespace>
+    <AssemblyName>HforceWindows</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ASPNetSpell, Version=4.0.3.24577, Culture=neutral, PublicKeyToken=ed4c1e6166f7ca72, processorArchitecture=MSIL">
+      <HintPath>..\packages\Spell.Check.4.0.3.2\lib\net40\ASPNetSpell.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clientes\FormClienteNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\FormClienteNuevo.Designer.cs">
+      <DependentUpon>FormClienteNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Clientes\FormContactoClienteNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Clientes\FormContactoClienteNuevo.Designer.cs">
+      <DependentUpon>FormContactoClienteNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Despacho\FormDespachoNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Despacho\FormDespachoNuevo.Designer.cs">
+      <DependentUpon>FormDespachoNuevo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MDI\FormMDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MDI\FormMDI.Designer.cs">
+      <DependentUpon>FormMDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remisiones\FormRemisionNuevo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Remisiones\FormRemisionNuevo.Designer.cs">
+      <DependentUpon>FormRemisionNuevo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Clientes\FormClienteNuevo.resx">
+      <DependentUpon>FormClienteNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Clientes\FormContactoClienteNuevo.resx">
+      <DependentUpon>FormContactoClienteNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Despacho\FormDespachoNuevo.resx">
+      <DependentUpon>FormDespachoNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MDI\FormMDI.resx">
+      <DependentUpon>FormMDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Remisiones\FormRemisionNuevo.resx">
+      <DependentUpon>FormRemisionNuevo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ASPNetSpellInclude\core\default.ashx" />
+    <None Include="ASPNetSpellInclude\debugging-test-scripts\Test-Instalation.ashx" />
+    <None Include="ASPNetSpellInclude\dictionaries\English %28International%29.dic" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Empleados\" />
+    <Folder Include="Ingreso\" />
+    <Folder Include="Nomina\" />
+    <Folder Include="Splash\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonAñadir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BotonGuardar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocPDF.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocTXT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DocXLS.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imprimir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\FileAgregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HforceNegocio\HforceNegocio.csproj">
+      <Project>{879a1b26-60ce-4a86-a073-0839dbe5382b}</Project>
+      <Name>HforceNegocio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EtiquetaComun.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ciudades.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserAgregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ASPNetSpellInclude\core\Default.aspx" />
+    <Content Include="ASPNetSpellInclude\core\dialog.js" />
+    <Content Include="ASPNetSpellInclude\debugging-test-scripts\Hello-World.aspx" />
+    <Content Include="ASPNetSpellInclude\debugging-test-scripts\support.txt" />
+    <Content Include="ASPNetSpellInclude\debugging-test-scripts\Test-Server-Ajax.aspx" />
+    <Content Include="ASPNetSpellInclude\dialog.html" />
+    <Content Include="ASPNetSpellInclude\dictionaries\custom.txt" />
+    <Content Include="ASPNetSpellInclude\dictionaries\language-rules\banned-words.txt" />
+    <Content Include="ASPNetSpellInclude\dictionaries\language-rules\common-mistakes.txt" />
+    <Content Include="ASPNetSpellInclude\dictionaries\language-rules\enforced-corrections.txt" />
+    <Content Include="ASPNetSpellInclude\dictionaries\README.txt" />
+    <Content Include="ASPNetSpellInclude\include.js" />
+    <Content Include="ASPNetSpellInclude\license.txt" />
+    <Content Include="ASPNetSpellInclude\support.txt" />
+    <Content Include="ASPNetSpellInclude\themes\bright\ajax-loader.gif" />
+    <Content Include="ASPNetSpellInclude\themes\bright\context-menu.css" />
+    <Content Include="ASPNetSpellInclude\themes\bright\dialog-window.css" />
+    <Content Include="ASPNetSpellInclude\themes\bright\ieonly.css" />
+    <Content Include="ASPNetSpellInclude\themes\buttons\spellicon.gif" />
+    <Content Include="ASPNetSpellInclude\themes\buttons\spelliconover.gif" />
+    <Content Include="ASPNetSpellInclude\themes\classic\ajax-loader.gif" />
+    <Content Include="ASPNetSpellInclude\themes\classic\context-menu.css" />
+    <Content Include="ASPNetSpellInclude\themes\classic\dialog-window.css" />
+    <Content Include="ASPNetSpellInclude\themes\classic\gwiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\classic\ieonly.css" />
+    <Content Include="ASPNetSpellInclude\themes\classic\wiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\clean\ajax-loader.gif" />
+    <Content Include="ASPNetSpellInclude\themes\clean\context-menu.css" />
+    <Content Include="ASPNetSpellInclude\themes\clean\dialog-window.css" />
+    <Content Include="ASPNetSpellInclude\themes\clean\gwiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\clean\ieonly.css" />
+    <Content Include="ASPNetSpellInclude\themes\clean\wiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\modern\ajax-loader.gif" />
+    <Content Include="ASPNetSpellInclude\themes\modern\context-menu.css" />
+    <Content Include="ASPNetSpellInclude\themes\modern\dialog-window.css" />
+    <Content Include="ASPNetSpellInclude\themes\modern\gwiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\modern\ieonly.css" />
+    <Content Include="ASPNetSpellInclude\themes\modern\wiggle.png" />
+    <Content Include="ASPNetSpellInclude\themes\modern\xp.gif" />
+    <Content Include="ASPNetSpellInclude\translations\af.js" />
+    <Content Include="ASPNetSpellInclude\translations\ar.js" />
+    <Content Include="ASPNetSpellInclude\translations\be.js" />
+    <Content Include="ASPNetSpellInclude\translations\bg.js" />
+    <Content Include="ASPNetSpellInclude\translations\ca.js" />
+    <Content Include="ASPNetSpellInclude\translations\cn.js" />
+    <Content Include="ASPNetSpellInclude\translations\cs.js" />
+    <Content Include="ASPNetSpellInclude\translations\cy.js" />
+    <Content Include="ASPNetSpellInclude\translations\da.js" />
+    <Content Include="ASPNetSpellInclude\translations\de.js" />
+    <Content Include="ASPNetSpellInclude\translations\el.js" />
+    <Content Include="ASPNetSpellInclude\translations\en.js" />
+    <Content Include="ASPNetSpellInclude\translations\es.js" />
+    <Content Include="ASPNetSpellInclude\translations\et.js" />
+    <Content Include="ASPNetSpellInclude\translations\fa.js" />
+    <Content Include="ASPNetSpellInclude\translations\fi.js" />
+    <Content Include="ASPNetSpellInclude\translations\fr.js" />
+    <Content Include="ASPNetSpellInclude\translations\ga.js" />
+    <Content Include="ASPNetSpellInclude\translations\gl.js" />
+    <Content Include="ASPNetSpellInclude\translations\hi.js" />
+    <Content Include="ASPNetSpellInclude\translations\hr.js" />
+    <Content Include="ASPNetSpellInclude\translations\hu.js" />
+    <Content Include="ASPNetSpellInclude\translations\id.js" />
+    <Content Include="ASPNetSpellInclude\translations\is.js" />
+    <Content Include="ASPNetSpellInclude\translations\it.js" />
+    <Content Include="ASPNetSpellInclude\translations\iw.js" />
+    <Content Include="ASPNetSpellInclude\translations\ja.js" />
+    <Content Include="ASPNetSpellInclude\translations\ko.js" />
+    <Content Include="ASPNetSpellInclude\translations\lt.js" />
+    <Content Include="ASPNetSpellInclude\translations\lv.js" />
+    <Content Include="ASPNetSpellInclude\translations\mk.js" />
+    <Content Include="ASPNetSpellInclude\translations\ms.js" />
+    <Content Include="ASPNetSpellInclude\translations\mt.js" />
+    <Content Include="ASPNetSpellInclude\translations\nl.js" />
+    <Content Include="ASPNetSpellInclude\translations\no.js" />
+    <Content Include="ASPNetSpellInclude\translations\pl.js" />
+    <Content Include="ASPNetSpellInclude\translations\pt.js" />
+    <Content Include="ASPNetSpellInclude\translations\ro.js" />
+    <Content Include="ASPNetSpellInclude\translations\ru.js" />
+    <Content Include="ASPNetSpellInclude\translations\simple.js" />
+    <Content Include="ASPNetSpellInclude\translations\sk.js" />
+    <Content Include="ASPNetSpellInclude\translations\sl.js" />
+    <Content Include="ASPNetSpellInclude\translations\sq.js" />
+    <Content Include="ASPNetSpellInclude\translations\sr.js" />
+    <Content Include="ASPNetSpellInclude\translations\sw.js" />
+    <Content Include="ASPNetSpellInclude\translations\template.js" />
+    <Content Include="ASPNetSpellInclude\translations\th.js" />
+    <Content Include="ASPNetSpellInclude\translations\tl.js" />
+    <Content Include="ASPNetSpellInclude\translations\tr.js" />
+    <Content Include="ASPNetSpellInclude\translations\tw.js" />
+    <Content Include="ASPNetSpellInclude\translations\uk.js" />
+    <Content Include="ASPNetSpellInclude\translations\vi.js" />
+    <Content Include="ASPNetSpellInclude\translations\yi.js" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

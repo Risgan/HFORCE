@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             x:Class="HFORCE.Views.LoginPage"
+             Title="LOGIN">
+    <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Login}">
+            <StackLayout Padding="10,20,10,5"
+                         VerticalOptions="CenterAndExpand"
+                         BackgroundColor="White">
+                
+                
+
+                <Label
+                    Text="Usuario"
+                    TextColor="Black">
+                </Label>
+
+
+                <Entry Placeholder="Ingrese su usuario"
+                       Keyboard="Email"
+                       TextColor="Black"
+                       Text="{Binding Usuario, Mode=TwoWay}">
+                </Entry>
+
+
+                <Label
+                    Text="Contraseña"
+                    TextColor="Black">
+                </Label>
+
+
+                <Entry Placeholder="Ingrese su contraseña"
+                       IsPassword="True"
+                       TextColor="Black"
+                       Text="{Binding Contraseña, Mode=TwoWay}">
+                </Entry>
+
+                <StackLayout
+                Orientation="Horizontal">
+                    <Label
+                    Text="Recordar"
+                    VerticalOptions="Center"
+                    HorizontalOptions="EndAndExpand">
+                    </Label>
+
+                    <Switch
+                    HorizontalOptions="End"
+                        IsToggled="{Binding IsRemember,Mode=TwoWay}">
+                    </Switch>
+
+                </StackLayout>
+
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}">
+                </ActivityIndicator>
+
+                <StackLayout
+                Orientation="Horizontal"
+                Margin="40,0">
+                    <Button
+                    IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                    BackgroundColor="Navy"
+                    CornerRadius="23"
+                    HeightRequest="46"
+                    TextColor="White"
+                    HorizontalOptions="FillAndExpand"
+                    Text="Login"
+                    Command="{Binding LoginCommand}">
+                    </Button>
+
+                    <Button
+                    BackgroundColor="Purple"
+                    IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                    HorizontalOptions="FillAndExpand"
+                    CornerRadius="23"
+                    TextColor="White"
+                    HeightRequest="46"
+                    Text="Registar">
+                    </Button>
+                </StackLayout>
+
+                <Label
+                    Text="Recuperar contraseña"
+                    HorizontalOptions="Center"
+                    TextColor="Blue">                    
+                </Label>
+
+                <Image 
+                Source="logo"
+                WidthRequest="200">
+                </Image>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

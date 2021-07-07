@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="HFORCE.MainPage"
+             Title="Login">
+
+    <StackLayout Padding="10,20,10,5">
+        <Label
+            FontAttributes="Bold"
+            FontSize="Large"
+            HorizontalOptions="CenterAndExpand"
+            Text="HFORCE "
+        />
+
+        <Image 
+            Source="logo"
+            WidthRequest="200">            
+        </Image>
+
+        <Label
+            Text="Usuario">            
+        </Label>
+
+
+        <Entry Placeholder="Ingrese su usuario"
+               Keyboard="Email">            
+        </Entry>
+
+
+        <Label
+            Text="Contraseña">
+        </Label>
+
+
+        <Entry Placeholder="Ingrese su contraseña"
+               IsPassword="True">
+        </Entry>
+        
+        <StackLayout
+            Orientation="Horizontal">
+            <Label
+                Text="Recordar"
+                VerticalOptions="Center"
+                HorizontalOptions="EndAndExpand">
+            </Label>
+
+            <Switch
+                HorizontalOptions="End">
+            </Switch>
+            
+        </StackLayout>        
+
+        <ActivityIndicator>            
+        </ActivityIndicator>
+
+        <StackLayout
+            Orientation="Horizontal"
+            Margin="40,0">
+            <Button
+                BackgroundColor="Navy"
+                CornerRadius="23"
+                HeightRequest="46"
+                TextColor="White"
+                HorizontalOptions="FillAndExpand"
+                Text="Login">            
+            </Button>
+
+            <Button
+                BackgroundColor="Purple"
+                HorizontalOptions="FillAndExpand"
+                CornerRadius="23"
+                TextColor="White"
+                HeightRequest="46"
+                Text="Registar">
+            </Button>
+        </StackLayout>
+
+
+    </StackLayout>
+
+</ContentPage>
